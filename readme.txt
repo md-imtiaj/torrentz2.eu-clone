@@ -1,3 +1,11 @@
+Torrentz2.eu was the world's most popular torrent meta search engine. But for
+some reason it is down and blocked in many countries. People are interested in setting up their own version of this fantastic web service to serve the download enthusiast and make some money by showing ads. But it is very difficult to find a good quality clone script, all available options are paid and hugely expensive. So I decided to make my own clone for the open source community and build this super powerful yet very lite tiny php/javascript script which requires no database support (using my own server side api). This beautifully designed script can serve thousands of traffic daily from a very low powered server (even static web hosting is enough). Ads spot provided for banner ads. Fully SEO friendly and mobile first responsive design will attract you.
+
+Will take only a minute to install (just upload it to your web hosting space).
+Detail Readme Inside.
+
+Demo: https://torrentz2.1111110.xyz/
+
 Please download the latst version from 
 https://blog.1111110.xyz/2022/03/Free-php-torrentz2-eu-torrent-search-engine-clone-script-download.html
 i regularly update the script with new features and bug fixes here.
