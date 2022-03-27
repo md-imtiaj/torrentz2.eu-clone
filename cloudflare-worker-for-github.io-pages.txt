@@ -1,0 +1,31 @@
+//https://stackoverflow.com/questions/57913819/s3-hosted-website-with-cloudflare-returns-404-status-code-for-any-route
+
+
+addEventListener('fetch', event => {
+  event.respondWith(fetchAndApply(event.request))
+})
+
+async function fetchAndApply(request) {
+  let originalResponse = await fetch(request)
+
+  const contentType = originalResponse.headers.get("Content-Type")
+
+  // Only bother with index pages (not assets)
+  if (contentType && contentType.includes("text/html")) {
+
+    // Force 404's from S3 to return as 200 to prevent Google indexing issues
+    let response = new Response(originalResponse.body, {
+        //...originalResponse,
+        status: 200, 
+        statusText: 'OK'
+      }
+    )
+
+    // Don't cache index.html
+    response.headers.set('Cache-Control', 'max-age=0')
+
+    return response
+  }
+
+  return originalResponse
+}
